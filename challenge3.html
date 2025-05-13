@@ -1,0 +1,63 @@
+<div class="semi"></div>
+<div></div>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #E3CC9E;
+    
+  }
+  div {
+    justify-self: flex-end;
+    position: absolute;
+    width: 40px;
+    height: 60%;
+    background: #D95F5B;
+    margin-top: 30px;
+    z-index: -1;
+    translate: 0 75px;
+    
+  }
+  .semi {
+    translate: 0 0;
+    justify-self: center;
+    border: 0;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    height: 80%;
+    width: 60%;
+    z-index: -1;
+    border-radius: 50%; 
+  }
+  .semi::after {
+    position: absolute;
+    content: "";
+    width: 80;
+    aspect-ratio: 1 / 1;
+    background: #D95F5B;
+    top: 80.07;
+    left: -0.2;
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 160px 0px #D95F5B;
+  }
+   .semi::before{
+    position: absolute;
+    background: #E3CC9E;
+    content: "";
+    width: 100;
+    bottom: -80;
+    box-shadow: 140px 0px #E3CC9E;
+    aspect-ratio: 1 / 2;
+</style>
+
+<!-- OBJECTIVE -->
+<!-- Write HTML/CSS in this editor and replicate the given target image in the least code possible. What you write here, renders as it is -->
+
+<!-- SCORING -->
+<!-- The score is calculated based on the number of characters you use (this comment included :P) and how close you replicate the image. Read the FAQS (https://cssbattle.dev/faqs) for more info. -->
+
+<!-- IMPORTANT: remove the comments before submitting -->
