@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: rgb(86, 77, 128); /* Updated text color */
 }
 
 /* Navbar Styles */
@@ -17,7 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #007BFF;
+    background-color: rgb(221, 17, 85); /* Updated background color */
     color: white;
 }
 
@@ -49,13 +49,13 @@ body {
 /* Challenges Section */
 .challenges {
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: rgb(51, 161, 253); /* Updated background color */
 }
 
 .challenges h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #007BFF;
+    color: rgb(221, 17, 85); /* Updated heading color */
 }
 
 .challenge-grid {
@@ -67,7 +67,7 @@ body {
 .challenge-card {
     background: white;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(86, 77, 128); /* Updated border color */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -78,19 +78,19 @@ body {
 }
 
 .challenge-card h3 {
-    color: #007BFF;
+    color: rgb(221, 17, 85); /* Updated card heading color */
     margin-bottom: 0.5rem;
 }
 
 .challenge-card p {
-    color: #555;
+    color: rgb(86, 77, 128); /* Updated card text color */
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
     padding: 1rem;
-    background: #007BFF;
+    background: rgb(221, 17, 85); /* Updated background color */
     color: white;
     margin-top: 2rem;
 }
