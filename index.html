@@ -6,36 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hack Haven</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
-    
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <!-- Login/Signup Modal -->
+  <div id="auth-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Login or Sign Up</h2>
+      <form id="auth-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Modal -->
+  <div id="admin-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Admin Panel</h2>
+      <form id="admin-form">
+        <label for="challenge-name">Challenge Name:</label>
+        <input type="text" id="challenge-name" name="challenge-name">
+        <label for="challenge-description">Description:</label>
+        <textarea id="challenge-description" name="challenge-description"></textarea>
+        <button type="submit" id="add-challenge">Add Challenge</button>
+        <button type="button" id="remove-challenge">Remove Challenge</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Content -->
   <nav>
     <div class="logo">Hack Haven</div>
     <div class="menu">
-      <a href="#">Learn Python</a>
-      <a href="#">Wecode</a>
-      <a href="#">Challenges</a>
-      <a href="#">Leaderboard</a>
+      <a href="#" id="login-btn">Login</a>
+      <a href="#" id="admin-btn">Admin</a>
     </div>
   </nav>
 
   <div class="main">
-    <div class="grid">
-      <!-- Repeat this card block as needed -->
-      <div class="card">
-        <img src="https://via.placeholder.com/160" alt="Placeholder" />
-        <div class="date">MAY 1</div>
-        <div class="score">Your score: Not played</div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/160" alt="Placeholder" />
-        <div class="date">MAY 2</div>
-        <div class="score">Your score: Not played</div>
-      </div>
-      <!-- Add more cards here -->
+    <div class="grid" id="challenges-grid">
+      <!-- Cards dynamically generated here -->
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
