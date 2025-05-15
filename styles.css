@@ -1,109 +1,125 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: rgb(86, 77, 128); /* Updated text color */
-}
-
-/* Navbar Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgb(221, 17, 85); /* Updated background color */
-    color: white;
-}
-
-.navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.navbar .nav-links li {
-    display: inline;
-}
-
-.navbar .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar .nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Challenges Section */
-.challenges {
-    padding: 2rem;
-    background-color: rgb(51, 161, 253); /* Updated background color */
-}
-
-.challenges h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: rgb(221, 17, 85); /* Updated heading color */
-}
-
-.challenge-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.challenge-card {
-    background: white;
-    padding: 1rem;
-    border: 1px solid rgb(86, 77, 128); /* Updated border color */
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.challenge-card:hover {
-    transform: translateY(-5px);
-}
-
-.challenge-card h3 {
-    color: rgb(221, 17, 85); /* Updated card heading color */
-    margin-bottom: 0.5rem;
-}
-
-.challenge-card p {
-    color: rgb(86, 77, 128); /* Updated card text color */
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: rgb(221, 17, 85); /* Updated background color */
-    color: white;
-    margin-top: 2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        text-align: center;
+      margin: 0;
+      background-color: #1e1f26;
+      font-family: 'DM Sans', sans-serif;
+      color: #ffffff;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 1rem;
+    nav {
+      background-color: #27293d;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
     }
-}
+
+    nav .logo {
+      color: #00adb5;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav .menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: filter 0.2s ease;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    nav .menu a:hover {
+      filter: brightness(1.2);
+    }
+
+    .main {
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #2c2f3f;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 10px;
+      text-align: center;
+      transition: filter 0.2s ease;
+    }
+
+    .card:hover {
+      filter: brightness(1.1);
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background-color: #3a3d4f;
+      display: block;
+      transition: filter 0.2s ease;
+    }
+    
+    .card img:hover {
+      filter: brightness(1.1);
+    }
+    
+    nav .menu a:hover {
+      background: #383c51;
+    }
+
+
+    .card .date {
+      background-color: #383c51;
+      padding: 5px;
+      margin: 5px 0;
+      display: inline-block;
+      border-radius: 5px;
+      color: #dddddd;
+    }
+
+    .card .score {
+      font-size: 14px;
+      color: #aaaaaa;
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
